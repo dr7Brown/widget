@@ -1,0 +1,34 @@
+return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: const TabBar(
+              tabs: [
+                //Insert tabs here
+                Tab(text: 'Repayments' /*icon: Icon(Icons.directions_car)*/),
+                Tab(
+                  text: 'Loans', /*icon: Icon(Icons.directions_transit)*/
+                ),
+                Tab(
+                  text: 'Deposite', /*icon: Icon(Icons.directions_transit)*/
+                ),
+              ],
+            ),
+            title: const Text('Loan Us'),
+            backgroundColor: kPrimaryColor,
+          ),
+          body: const TabBarView(
+            // physics: BouncingScrollPhysics(),
+            dragStartBehavior: DragStartBehavior.down,
+            children: [
+              //Insert tab widgets here
+              RepaymentScreen(), 
+              PaymentScreen(),
+              DepositScreen(),
+            ],
+          ),
+        ),
+      ),
+    );
+  

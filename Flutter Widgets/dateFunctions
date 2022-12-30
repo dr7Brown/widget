@@ -1,0 +1,24 @@
+/*
+              mDuration = int.parse(durationController.text);
+              //Get firstrepDate
+              //Calc lastrepDate
+              DateTime lastrepDate =
+                  nextRepaymentDate(myFirstRepDate, 0, mDuration);
+              print('last rep date: $lastrepDate');
+              //Calc to get number of 7days
+              int numdays = lastrepDate.difference(myFirstRepDate).inDays;
+              
+              print('number of days: $numdays');
+              //get num of 7days
+              int num7 = numdays ~/ 7;
+              print('number of weeks: $num7');
+              */
+
+              /*
+  //Function to return repayment date of indexed repayment term.
+  repaymentDate(DateTime firstRepayment, int days, int repaymtIndex) {
+    int duration = days * repaymtIndex;
+    DateTime repaymentDate = firstRepayment.add(Duration(days: duration));
+    return DateFormat('yyyy-MM-dd').format(repaymentDate);
+  }
+*/

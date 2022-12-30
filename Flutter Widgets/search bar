@@ -1,0 +1,28 @@
+
+                      IconButton(
+                        icon: Icon(Icons.search, color: red800),
+                        onPressed: () {},
+                      ),
+
+
+
+
+
+
+
+
+dependencies:
+  anim_search_bar: ^2.0.2
+
+AnimSearchBar(
+  width: 100,
+  textController: searchTextController,
+  onSuffixTap: () {
+    setState(() {
+      searchTextController.clear();
+    });
+},
+                  ),
+                     
+
+             

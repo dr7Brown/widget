@@ -1,0 +1,25 @@
+Text(
+  'Forgot password?',
+   style: TextStyle(
+    color: kZambeziColor,
+    fontSize: 16,
+    //decoration: TextDecoration.underline,
+    decorationThickness: 1,
+  ),
+),
+
+Text(
+  'Forgot password?',
+   style: TextStyle(
+    color: kWhiteColor,
+    fontSize: 12,
+    //decoration: TextDecoration.underline,
+    decorationThickness: 1,
+  ),
+),
+
+//2
+Text(
+  'Please enter your email address',
+  style: subTitle.copyWith(fontWeight: FontWeight.w600),
+),

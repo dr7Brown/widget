@@ -1,0 +1,24 @@
+Image.asset(
+  'images/google.png',
+  fit: BoxFit.cover,
+)
+
+Container(
+  height: 30,
+  alignment:
+      Alignment.center, // This is needed
+  child: Image.asset(
+    'images/mat_empty_box.png',
+    fit: BoxFit.fitWidth,
+    //width: 30,
+  ),
+),
+
+
+//TODO fill path
+height: double.infinity,
+width: double.infinity,
+
+BoxFit.cover will cover the whole container
+BoxFit.fitWidth will fit the width and eventually put horizontal white bars to fill the space
+BoxFit.fitHeight will fit the height and eventually put vertical white bars to fill the space

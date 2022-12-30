@@ -1,0 +1,126 @@
+---- FirebAse CLI  commands ------------
+
+########################################################################################################################
+
+     Welcome to...
+   ######## #### ########  ######## ########     ###     ######  ########  ##
+   ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##        ##
+   ######    ##  ########  ######   ########  #########  ######  ######    ##
+   ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+   ##       #### ##     ## ######## ########  ##     ##  ######  ########  ##
+
+
+########################################################################################################################
+
+~ Let's make sure your Firebase CLI is ready...
++ Looks like your CLI is set up!
+
+Already logged in as djimateyevans@gmail.com
+
++ You can now use the 'firebase' or 'npm' commands!
+~ For more help see https://firebase.google.com/docs/cli/
+
+------------------------------------------------------------------------------------------------------------------------
+
+> firebase --version
+11.19.0
+
+> cd D:\Apps\flutter\firebaseapp
+
+> d:
+
+> cd D:\Apps\flutter\firebaseapp
+
+> flutterfire configure
+i Found 0 Firebase projects.
+FirebaseCommandException: An error occured on the Firebase CLI when attempting to run a command.
+COMMAND: firebase --version
+ERROR: The FlutterFire CLI currently requires the official Firebase CLI to also be installed, see https://firebase.google.com/docs/cli#install_the_firebase_cli for how to install it.
+
+> firebase projects:list
+√ Preparing the list of your Firebase projects
+┌──────────────────────┬─────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name │ Project ID              │ Project Number │ Resource Location ID │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ bookstore            │ bookstore-f8790         │ 139994598478   │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ chatApp              │ chatapp-78f1c           │ 74727603910    │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ LoanAppFlutter       │ loanappflutter          │ 253197300792   │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ Login Fragmented     │ login-fragmented        │ 923907613591   │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ MF Loan Calculator   │ mf-loan-calculator      │ 942114403406   │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ myfirebase           │ myfirebase-5f53c        │ 10400772943    │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ techafrica2020       │ techafrica2020          │ 594419662855   │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ TestAppFlutter       │ testappflutter-5f6a0    │ 948051208889   │ [Not specified]      │
+├──────────────────────┼─────────────────────────┼────────────────┼──────────────────────┤
+│ TestLoginFirebase    │ testloginfirebase-4a321 │ 682938019477   │ us-central           │
+└──────────────────────┴─────────────────────────┴────────────────┴──────────────────────┘
+
+9 project(s) total.
+
+> firebase login:ci
+!  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started
+
+Visit this URL on this device to log in:
+https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=997022914&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+
+Waiting for authentication...
+
++  Success! Use this token to login on a CI server:
+
+1//03nmXIUzc-5WHCgYIARAAGAMSNwF-L9IrfWvJqA58rY_wZKhZKUrwUBUKxh82O2DVVpmjPKuWQYdFNG4jCbrN__rx1YmUeAD6NwY
+
+Example: firebase deploy --token "$FIREBASE_TOKEN"
+
+
+> firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Apps\flutter\firebaseapp
+
+? Are you ready to proceed? Yes
+? Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confir
+m your choices. Realtime Database: Configure a security rules file for Realtime Database and (optionally) provision defa
+ult instance
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: testappflutter-5f6a0 (TestAppFlutter)
+i  Using project testappflutter-5f6a0 (TestAppFlutter)
+
+=== Database Setup
+i  database: ensuring required API firebasedatabase.googleapis.com is enabled...
++  database: required API firebasedatabase.googleapis.com is enabled
+
+
+Firebase Realtime Database Security Rules allow you to define how your data should be
+structured and when your data can be read from and written to.
+
+? What file should be used for Realtime Database Security Rules? database.rules.json
++  Database Rules for testappflutter-5f6a0-default-rtdb have been written to database.rules.json.
+Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+firebase deploy.
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
++  Firebase initialization complete!
+
+>

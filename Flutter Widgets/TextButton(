@@ -1,0 +1,4 @@
+ TextButton(
+    child: const Text('BUY TICKETS'),
+    onPressed: () {/* ... */},
+    ),

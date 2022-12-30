@@ -1,0 +1,19 @@
+Expanded cannot be used inside a Stack.
+You should use Expanded only within a Column, Row or Flex
+
+Free webhosting sites
+1. Freehosting.com
+2. Awardspace
+
+
+15
+
+
++25
+Firebase Cloud Firestore makes all of this for you. If You can't use this, other solution is much more complicated as syncing information can be very tricky.
+
+Imagine the user has 2 devices, both saving the same data, which version should the server keep, the newest created data, or the data the server received first?
+
+SQLite is good for structured data, but you could save your data as a JSON string using System Preferences and just push that JSON to the server, it's a lot simpler if can do it this way.
+
+Again, this really not a simple answer to give and varies from project to project.

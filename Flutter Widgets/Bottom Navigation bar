@@ -1,0 +1,53 @@
+int index = 0;  //Make this a global declaration
+
+return Scaffold(
+      body: IndexedStack(
+        sizing: StackFit.loose,
+        index: index,
+        children: [
+          const DashboardWidget(),
+          const PayDepoContainer(),
+          //const TestWidget(),
+          LogInScreen(),
+          MyHomePage(),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        color: kPrimaryColor,
+        //height: 100,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          child: GNav(
+              color: Colors.white,
+              activeColor: kcolormix,
+              //hoverColor: kcolormix,
+              gap: 8,
+              padding: EdgeInsets.all(16),
+              onTabChange: (int newIndex) {
+                //perform on tab change actions here.
+                setState(() {
+                  index = newIndex;
+                });
+              },
+              tabs: const [
+                GButton(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+                GButton(
+                  icon: Icons.payment,
+                  text: 'Payments',
+                ),
+                GButton(
+                  icon: Icons.group,
+                  text: 'Users',
+                ),
+                GButton(
+                  icon: Icons.print,
+                  text: 'Reports',
+                )
+              ]),
+        ),
+      ),
+    );
+ 

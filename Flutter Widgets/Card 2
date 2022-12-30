@@ -1,0 +1,33 @@
+ return Card(
+                            elevation: 4.0,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 10.0, vertical: 6.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 20.0, vertical: 10.0),
+                                  leading: const Icon(Icons.account_circle),
+                                  title: Text(element['name']),
+                                  trailing: const Icon(Icons.arrow_forward),
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                    TextButton(
+                                      child: const Text('BUY TICKETS'),
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    const SizedBox(width: 8),
+                                    TextButton(
+                                      child: const Text('LISTEN'),
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    const SizedBox(width: 8),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          );
+                      

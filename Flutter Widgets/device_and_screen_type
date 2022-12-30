@@ -1,0 +1,24 @@
+ScreenType getFormFactor(BuildContext context) {
+  // Use .shortestSide to detect device type regardless of orientation
+  double deviceWidth = MediaQuery.of(context).size.shortestSide;
+  if (deviceWidth > FormFactor.desktop) return ScreenType.Desktop;
+  if (deviceWidth > FormFactor.tablet) return ScreenType.Tablet;
+  if (deviceWidth > FormFactor.handset) return ScreenType.Handset;
+  return ScreenType.Watch;
+}
+
+
+
+
+
+
+//Screen type
+enum ScreenSize { Small, Normal, Large, ExtraLarge }
+
+ScreenSize getSize(BuildContext context) {
+  double deviceWidth = MediaQuery.of(context).size.shortestSide;
+  if (deviceWidth > 900) return ScreenSize.ExtraLarge;
+  if (deviceWidth > 600) return ScreenSize.Large;
+  if (deviceWidth > 300) return ScreenSize.Normal;
+  return ScreenSize.Small;
+}

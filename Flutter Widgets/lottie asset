@@ -1,0 +1,9 @@
+SizedBox.square(
+              child: Lottie.asset(
+                'assets/ripple.json',
+                //height: 140, //size.height * 0.3,
+                //width: 140, //double.infinity,
+                fit: BoxFit.fill,
+              ),
+              dimension: 50,
+            ),

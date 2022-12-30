@@ -1,0 +1,82 @@
+// ignore_for_file: unnecessary_const
+
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+import 'package:loanapp/screens/payments_screen.dart';
+import 'package:loanapp/screens/deposit_screen.dart';
+import 'package:loanapp/screens/repayment_screen.dart';
+import 'package:loanapp/theme.dart';
+
+class PayDepoContainer extends StatefulWidget {
+  const PayDepoContainer({super.key});
+
+  @override
+  State<PayDepoContainer> createState() => _PayDepoContainerState();
+}
+
+class _PayDepoContainerState extends State<PayDepoContainer>
+    with TickerProviderStateMixin {
+  int index = 0;
+
+  late TabController tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(
+      initialIndex: 0,
+      length: 3,
+      vsync: this,
+    );
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        //title: const Text('Loan Us'),
+        backgroundColor: kPrimaryColor,
+        title: Row(
+          children: [
+            Spacer(),
+            Container(
+              width: 400,
+              child: TabBar(
+                labelColor: Color.fromARGB(255, 242, 242, 245),
+                //labelStyle: theme.textTheme.headline1,
+                indicatorColor: Color.fromARGB(255, 43, 208, 213),
+                unselectedLabelColor: Colors.grey,
+                controller: tabController,
+                tabs: [
+                  Tab(text: 'Repayments' /*icon: Icon(Icons.directions_car)*/),
+                  Tab(
+                    text: 'Loans', /*icon: Icon(Icons.directions_transit)*/
+                  ),
+                  Tab(
+                    text: 'Deposit', /*icon: Icon(Icons.directions_transit)*/
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      body: TabBarView(
+        controller: tabController,
+        // physics: BouncingScrollPhysics(),
+        dragStartBehavior: DragStartBehavior.down,
+        children: [
+          RepaymentScreen(),
+          PaymentScreen(),
+          DepositScreen(),
+        ],
+      ),
+    );
+}

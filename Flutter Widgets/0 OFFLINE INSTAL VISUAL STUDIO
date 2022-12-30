@@ -1,0 +1,10 @@
+link: https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022
+
+STEP 1: DOWNLOAD BOOTSTRAPPER
+STEP 2: MOVE STRAPPER TO DRIVE C
+STEP 3: OPEN CMD FROM THIS SAME LOCATION.
+STEP 4: RUN THE CODE BELOW FOR VS MOBILE DEVELOPMENT WITH C++
+vs_Community.exe --layout c:\localVSlayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+
+
+NB: YOU CAN ADD OTHER FEATURES OR COMPONENTS

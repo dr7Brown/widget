@@ -1,0 +1,24 @@
+return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: const TabBar(
+              tabs: [
+                Tab(text: 'Payments' /*icon: Icon(Icons.directions_car)*/),
+                Tab(
+                  text: 'Loans', /*icon: Icon(Icons.directions_transit)*/
+                ),
+                Tab(
+                  text: 'Deposite', /*icon: Icon(Icons.directions_transit)*/
+                ),
+              ],
+            ),
+          ),
+          body: const TabBarView(
+            children: [
+              
+            ],
+          ),
+        ),
+      ),

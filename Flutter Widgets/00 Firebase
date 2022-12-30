@@ -1,0 +1,48 @@
+Stage 1: 
+//setting up CLI
+
+step 1:
+download and instal Firebase cli
+link: https://firebase.google.com/docs/flutter/setup?platform=android
+
+step 2: 
+//Log into Firebase using your Google account by running the following command:
+firebase login
+
+step 3:
+install node js
+install npm
+
+step 4: 
+//Install the FlutterFire CLI by running the following command from any directory:
+dart pub global activate flutterfire_cli
+
+
+
+
+Stage 2: 
+step 1:
+create app in firebase console 
+(link: https://console.firebase.google.com)
+
+step 2: 
+flutter pub add firebase_database
+
+step 3: 
+import 'package:firebase_database/firebase_database.dart';
+
+step 4:
+//Add to class data variables
+final database = FirebaseDatabase.instance.reference();
+
+step 5:
+//just inside widget 
+final dailySpecialRef = database.child('dailySpecial/');
+step 6:
+
+
+ids:
+Platform  Firebase App Id
+web       1:948051208889:web:1fd2d490ecce750ca44968
+android   1:948051208889:android:2af7d57e0cca5180a44968
+ios       1:948051208889:ios:2ce5ae7f1c717d70a44968

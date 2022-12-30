@@ -1,0 +1,17 @@
+
+
+SingleChildScrollView(
+        physics: ScrollPhysics(), //Very necessary
+        child: Column(
+          children: <Widget>[
+             Text('Hey'),
+             ListView.builder(
+                physics: NeverScrollableScrollPhysics(),  //Very necessary
+                shrinkWrap: true,                         //Very necessary
+                itemCount:18,
+                itemBuilder: (context,index){
+                  return  Text('Some text');
+                })
+          ],
+        ),
+      ),

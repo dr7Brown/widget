@@ -1,0 +1,8 @@
+Adding firebase realtime to flutter
+
+run;
+flutter pub add firebase_core
+
+flutter pub add fluent_ui //ui kit for windows app
+
+flutter pub add firedart

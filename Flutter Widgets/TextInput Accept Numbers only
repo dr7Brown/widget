@@ -1,0 +1,5 @@
+keyboardType: TextInputType.number,
+//FilteringTextInputFormatter.digitsOnly, cant use , or .
+                    inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.allow((RegExp("[.,0-9]"))),
+                    ],

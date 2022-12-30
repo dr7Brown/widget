@@ -1,0 +1,35 @@
+flutter clean		//Clean installed pubs
+flutter pub cache repair
+flutter pub get		//Fix cleaned pubs
+
+Build app for specific desktop
+ flutter run -d windows
+ flutter run -d macos
+ flutter run -d linux
+
+Build app for android
+ flutter build apk --debug
+ flutter build apk --profile
+ flutter build apk --release
+
+To add desktop to existing flutter
+run: 
+    flutter create .
+
+Build a release app
+To generate a release build, run one of the following commands:
+
+ flutter build windows
+ flutter build macos
+ flutter build linux
+
+Windows security frequently deletes this.
+copy and replace if flutter fails to run apps.
+C:\flutter\bin\cache\artifacts\engine\windows-x64\impellerc.exe
+
+https://icons8.com/preloaders/
+https://flutterstudio.app/
+
+wave files
+https://lottiefiles.com/animation/wave
+
